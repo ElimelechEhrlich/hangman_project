@@ -24,7 +24,9 @@ def end_of_game(display,secret,guessed):
     if '_' in display:
         return ('The tries are over!') 
     else:
-        return (f"""You guessed the whole word!!!\nThe word is: {secret}\nThe letters you guessed are: {guessed}\n""")
+        return (f"""You guessed the whole word!!!\n
+                The word is: {secret}\n
+                The letters you guessed are: {guessed}\n""")
 
 def init_state(secret: str=None, max_tries:int=10) -> dict:
     if secret == None:
@@ -62,13 +64,13 @@ def game_mode(status:dict):
             guessed.add(signal)
             wrong_guesses.add(signal)
         max_tries -= 1
-        print('--------------------------------')
-        print ('display:', display)
-        print ('guessed:', guessed)
-        print ('Correct_guesses:', Correct_guesses)
-        print ('wrong_guesses:', wrong_guesses)
-        print ('max_tries:', max_tries)
-        print('--------------------------------')
+        print(f"""-----------------------------------------\n
+                display: display\n
+                guessed: guessed\n
+                Correct_guesses: Correct_guesses\n
+                wrong_guesses: wrong_guesses\n
+                max_tries: max_tries\n
+        -------------------------------------------""")
 
     return end_of_game(display,secret,guessed)
 
