@@ -65,12 +65,12 @@ def game_mode(status:dict):
             wrong_guesses.add(signal)
         max_tries -= 1
         print(f"""-----------------------------------------\n
-                display: display\n
-                guessed: guessed\n
-                Correct_guesses: Correct_guesses\n
-                wrong_guesses: wrong_guesses\n
-                max_tries: max_tries\n
-        -------------------------------------------""")
+                display: {display}\n
+                guessed: {guessed}\n
+                Correct_guesses: {Correct_guesses}\n
+                wrong_guesses: {wrong_guesses}\n
+                max_tries: {max_tries}\n
+-------------------------------------------""")
 
     return end_of_game(display,secret,guessed)
 
